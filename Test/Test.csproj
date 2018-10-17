@@ -53,7 +53,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TupyJobManager\Tupy.Jobs.csproj">
+    <ProjectReference Include="..\Tupy.Jobs\Tupy.Jobs.csproj">
       <Project>{60704ff6-a19a-489a-a4fb-49e522afb808}</Project>
       <Name>Tupy.Jobs</Name>
     </ProjectReference>
