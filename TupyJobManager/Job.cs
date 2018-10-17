@@ -8,7 +8,7 @@ namespace TupyJobManager
         public string Name { get; set; }
         public Schedule Schedule { get; set; }
         public Action StepAction { get; set; }
-        public Action<ExecutionStatus> ReportStatus { get; set; }
+        public Action<ExecutionResponse> ReportStatus { get; set; }
 
         public Job()
         {
@@ -25,9 +25,9 @@ namespace TupyJobManager
             Schedule.FrequencyInterval = frequencyInterval;
         }
 
-        public ExecutionStatus Execute()
+        public ExecutionResponse Execute()
         {
-            var result = new ExecutionStatus(true);
+            var result = new ExecutionResponse(true);
 
             try
             {
@@ -36,9 +36,9 @@ namespace TupyJobManager
             }
             catch (Exception ex)
             {
-                result.Success = false;
+                result.IsSuccess = false;
                 result.Message = "An error has occured.";
-                result.Data = ex.Message;
+                result.Content = ex.Message;
             }
 
             ReportStatus?.Invoke(result);
