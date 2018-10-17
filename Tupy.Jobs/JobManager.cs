@@ -5,24 +5,24 @@ using System.Threading.Tasks;
 
 namespace Tupy.Jobs
 {
-    public static class JobManager
+    public class JobManager
     {
-        private static bool continueexecute;
-        public static bool Running { get; private set; }
-        public static List<Job> Jobs { get; set; } = new List<Job>();
+        private bool continueexecute;
+        public bool Running { get; private set; }
+        public List<Job> Jobs { get; set; } = new List<Job>();
 
-        public static void Start()
+        public void Start()
         {
             continueexecute = true;
             Task.Run(() => Run());
         }
 
-        public static void Stop()
+        public void Stop()
         {
             continueexecute = false;
         }
 
-        private static async Task Run()
+        private async Task Run()
         {
             Running = true;
             while (continueexecute)

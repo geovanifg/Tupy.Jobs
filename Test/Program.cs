@@ -59,10 +59,12 @@ namespace Test
             j2.Schedule.FrequencyOption = FrequencyOptions.Hour;
             j2.Schedule.FrequencyInterval = 1;
 
-            JobManager.Jobs.Add(j1);
-            JobManager.Jobs.Add(j2);
+            var jobmgr = new JobManager();
 
-            JobManager.Start();
+            jobmgr.Jobs.Add(j1);
+            jobmgr.Jobs.Add(j2);
+
+            jobmgr.Start();
 
             // Aguardar uma hora
             //Thread.Sleep(60 * 1000 * 60);
@@ -70,7 +72,7 @@ namespace Test
             // Aguardar um minuto
             Thread.Sleep(60 * 1000);
 
-            JobManager.Stop();
+            jobmgr.Stop();
         }
     }
 }
