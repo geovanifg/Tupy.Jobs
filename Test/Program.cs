@@ -19,9 +19,9 @@ namespace Test
             int result = a / b;
         }
 
-        static void Log(ExecutionStatus status)
+        static void Log(ExecutionResponse status)
         {
-            Console.WriteLine($"{DateTime.Now} - {status.Success} - {status.Message} - {status.Data}");
+            Console.WriteLine($"{DateTime.Now} - {status.IsSuccess} - {status.Message} - {status.Content}");
         }
 
         static void Main(string[] args)
