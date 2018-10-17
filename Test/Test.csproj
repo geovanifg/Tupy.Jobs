@@ -53,9 +53,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TupyJobManager\TupyJobManager.csproj">
+    <ProjectReference Include="..\TupyJobManager\Tupy.Jobs.csproj">
       <Project>{60704ff6-a19a-489a-a4fb-49e522afb808}</Project>
-      <Name>TupyJobManager</Name>
+      <Name>Tupy.Jobs</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

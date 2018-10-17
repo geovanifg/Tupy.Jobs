@@ -1,7 +1,7 @@
 ﻿using System;
 using Tupy;
 
-namespace TupyJobManager
+namespace Tupy.Jobs
 {
     public class Job
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 using Tupy;
-using TupyJobManager;
+using Tupy.Jobs;
 
 namespace Test
 {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TupyJobManager
+namespace Tupy.Jobs
 {
     public static class ScheduleHelper
     {

@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace TupyJobManager
+namespace Tupy.Jobs
 {
     public static class JobManager
     {
